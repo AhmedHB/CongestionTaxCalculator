@@ -7,12 +7,12 @@ This application is about calculation the congestion tax fee for vehicles within
 Each city has its own tax rules. A tax rule could be for example be that in one city some vehicles are tax free. Another rule could be a single charge rule, where if a vehicle passes several tolling stations within 60 minutes only one tax is applied. The tax that is chosen is the highest amount. Other rules could be weekends are free regardless of vehicle type and time. Finally, there is a maximum amount per day a vehicle can be charged and that is 60 SEK.
 
 Here are some examples of vehicles that are toll fee
-•	Emergency vehicles
-•	Busses
-•	Diplomat vehicles
-•	Motorcycles
-•	Military vehicles
-•	Foreign vehicles
+-	Emergency vehicles
+-	Busses
+-	Diplomat vehicles
+-	Motorcycles
+-	Military vehicles
+-	Foreign vehicles
 
 Here is an example of the hours and amounts for congestion tax in one city:
 
