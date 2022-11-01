@@ -1,0 +1,70 @@
+api:
+
+  common:
+    version: 1.0.0
+    title: Congestion Tax Calculator API
+    description: Calculates the toll fee
+    termsOfServiceUrl: MINE TERMS OF SERVICE URL
+    license: License
+    licenseUrl: MY LICENSE URL
+
+    contact:
+      name: Ahmed HB
+      url: My
+      email: ahmed.haji.bile@gmail.com
+
+  tollfee-composite:
+
+    get-composite-tollfee:
+      description: Returns the toll fee for vehicle, city and date
+      notes: |
+        # Normal response
+        If the requested city is found and the method will return information regarding:
+        1. The toll fee
+
+    get-composite-tollfeetax:
+      description: Returns the toll fee tax for vehicle, city and dates
+      notes: |
+        # Normal response
+        If the requested city is found and the method will return information regarding:
+        1. The toll fee tax
+
+    create-composite-tollfee:
+      description: Creates a composite tollfee
+      notes: |
+        # Normal response
+        The composite tollfee information posted to the API will be stored
+
+        # Expected error responses
+        1. If a tollfee with the same city as specified in the posted information already exists,
+           an <b>422 - Unprocessable Entity</b> error with a "duplicate key" error message will be returned        
+
+server.port: 7000
+server.error.include-message: always
+
+app:
+  tollfee-service:
+    host: localhost
+    port: 7001
+  tollfeecalculator-service:
+    host: localhost
+    port: 7002
+
+logging:
+  level:
+    root: INFO
+    se.ahmed: DEBUG
+
+
+---
+spring.profiles: docker
+
+server.port: 8080
+
+app:
+  tollfee-service:
+    host: tollfee
+    port: 8080
+  tollfeecalculator-service:
+    host: tollfeecalculator
+    port: 8080
