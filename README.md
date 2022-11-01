@@ -32,6 +32,7 @@ Here is an example of the hours and amounts for congestion tax in one city:
 ## How to build and run the code
 
 Using Gradle build tool and docker if you are at root directory of the project in a terminal you can run the following commands:
+
 gradlew clean build && docker-compose build
 
 docker-compose up -d
